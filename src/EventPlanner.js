@@ -7,7 +7,11 @@ class EventPlanner {
   displayAnEvent(){
     let div = document.createElement('div')
     div.innerText = `${this._content} happening on: ${this._date}`
-    return div
+    return div;
+  }
+
+  getDateObject() {
+    return Date.parse(this._date);
   }
 
   getContent() {

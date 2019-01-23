@@ -1,5 +1,4 @@
-
-window.addEventListener('load', ()=>{
+window.addEventListener('load', ()=> {
 
 let calendar = new EventCalendar();
 let button = document.getElementById('event_create_button')
@@ -15,7 +14,7 @@ function makeEvent() {
   let event = new EventPlanner(content, datetime);
   calendar.pushEvent(event);
   displayEvent()
-  }
+}
 
   const displayEvent = ()=> {
     let eventlistings = document.getElementById('eventlistings');
