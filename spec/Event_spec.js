@@ -1,19 +1,18 @@
-describe('Event', function() {
+describe('Event', function () {
+  describe('#list', function() {
+    var an_event = new Event();
+    var diary = new EventDiary();
+    an_event.createEvent('Workshop', '2020/01/01', '10:00');
+    diary.saveEvent(an_event);
+    can('read its content', function () {
+      expect(an_event._content).toEq('Workshop')
+    });
+    can('read its date', function () {
+      expect(an_event._date).toEq('2020/01/01')
+    });
+    can('read its time', function () {
+      expect(an_event._time).toEq('10:00')
+    });
 
-  let eventPlanner = new Event()
-
-  it('eventPlanner is an instance of Event Planner class', function() {
-    instanceOf(eventPlanner, Event);
   });
-
-  it('checks for content', function() {
-    let Event2 = new Event('content')
-    expectToEqual('content', eventPlanner2.getContent());
-  });
-
-  it('checks for the date', function() {
-    let eventPlanner3 = new Event('content', '22/01/2019')
-    expectToEqual('22/01/2019', eventPlanner3.getDate());
-  });
-
 });
