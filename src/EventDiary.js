@@ -7,7 +7,15 @@ class EventDiary {
     this._eventList.push(event);
   }
 
-  upComingEvents(){
+  sortedUpcomingEvents(){
+    let sortedList = this.upcomingEvents()
+    sortedList.sort((event1,event2) =>{
+      return event1.getDateObject() - event2.getDateObject();
+    });
+    return sortedList;
+  }
+
+  upcomingEvents(){
     let upcoming = [];
     this._eventList.forEach((event) => {
       let now = new Date();
@@ -21,7 +29,7 @@ class EventDiary {
 
   displayEvent(){
     let div = document.createElement('div');
-    this.upComingEvents().forEach((e)=>{
+    this.sortedUpcomingEvents().forEach((e)=>{
       let eventHTML = e.displayAnEvent();
       div.appendChild(eventHTML);
     })
