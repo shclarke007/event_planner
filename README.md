@@ -25,6 +25,9 @@ So others can use my app
 I'd like it to be deployed publicly    
 
 ```
+## Approach
+1. Model Front-End of Single Page App
+2. Diagram flow of requests
 
 ## How to user
 
@@ -39,4 +42,6 @@ I'd like it to be deployed publicly
 [Rodrique](https://github.com/Rodrigue-K)
 
 ## Contributors
-[Emanuele](https://github.com/emanuelegorga)
+[Emanuele](https://github.com/emanuelegorga)  
+[Jacques](https://github.com/jlaffbabs)  
+[Subomi](https://github.com/subomionanuga)
