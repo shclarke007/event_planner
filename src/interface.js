@@ -1,6 +1,7 @@
 window.addEventListener('load', ()=> {
-
+  
 let diary = new EventDiary();
+window.e = diary._eventList;
 let button = document.getElementById('event_create_button')
 
 button.addEventListener('click', ()=> {
