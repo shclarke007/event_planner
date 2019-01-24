@@ -14,4 +14,21 @@ describe('Event Diary', ()=>{
       expect(_diary._eventList.length).toEq(1)
     });
   });
+  describe('#upcoming', ()=>{
+    let event1 = new Event()
+    let event2 = new Event()
+    let diary1 = new EventDiary()
+    event1.createEvent('JS', '2019-10-10', '10:00')
+    event2.createEvent('Ruby', '2018-10-10', '10:00')
+    diary1.saveEvent(event1)
+    diary1.saveEvent(event2)
+    can('return only upcoming events',()=>{
+      expect(diary1._eventList[0]._content).toEq('JS')
+      expect(diary1._eventList[0]._date).toEq('2019-10-10')
+      expect(diary1._eventList[0]._time).toEq('10:00')
+
+      expect(diary1.upComingEvents().length).toEq(1)
+    })
+
+  });
 });
