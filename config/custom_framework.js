@@ -1,10 +1,12 @@
 //takes in a description and test code to execute
 const describe = (description, fn)=> {
   console.log(description)
+  // document.getElementById('describe').innerText = description
   fn()
 }
 
 const can = (message, fn) => {
+  // document.getElementById('can').innerText = '--' + message
   console.log(' -- ' + message)
   fn()
 }
