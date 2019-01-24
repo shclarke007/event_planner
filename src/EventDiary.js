@@ -1,4 +1,4 @@
-class EventCalendar {
+class EventDiary {
   constructor(eventList = null) {
     this._eventList = [];
   }

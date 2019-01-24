@@ -1,12 +1,12 @@
-describe('EventCalendar', function() {
+describe('EventDiary', function() {
 
-  let eventCalendar = new EventCalendar()
+  let eventCalendar = new EventDiary()
   let eventPlannerContent = "content"
   let eventPlannerDate = "21/11/2019"
   let eventPlanner = eventPlannerContent + ' ' + eventPlannerDate
 
   it('eventCalendar is an instance of Event Calendar class', function() {
-    instanceOf(eventCalendar, EventCalendar);
+    instanceOf(eventCalendar, EventDiary);
   });
 
   it('eventCalendar is able to show list of the events', function() {

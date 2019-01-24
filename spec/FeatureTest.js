@@ -1,11 +1,11 @@
 describe('Feature Test', function() {
 
-  let eventPlanner = new EventPlanner()
-  let eventCalendar = new EventCalendar()
+  let anevent = new Event()
+  let eventDiary = new EventDiary()
 
   it('We can create an event and push it in a calendar', function() {
-    eventCalendar.pushEvent(eventPlanner)
-    expectToEqual(eventPlanner, eventCalendar.showEvents());
+    eventCalendar.pushEvent(Event)
+    expectToEqual(Event, eventCalendar.showEvents());
   });
 
 });

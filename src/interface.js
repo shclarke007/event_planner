@@ -1,6 +1,6 @@
 window.addEventListener('load', ()=> {
 
-let calendar = new EventCalendar();
+let calendar = new EventDiary();
 let button = document.getElementById('event_create_button')
 
 button.addEventListener('click', ()=> {
@@ -11,7 +11,7 @@ button.addEventListener('click', ()=> {
 function makeEvent() {
   let content = document.getElementById('user_input').value
   let datetime = document.getElementById('date_time').value
-  let event = new EventPlanner(content, datetime);
+  let event = new Event(content, datetime);
   calendar.pushEvent(event);
   displayEvent()
 }

@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="" dir="ltr">
   <head>
-    <script type="text/javascript" src="src/EventCalendar.js"></script>
-    <script type="text/javascript" src="src/EventPlanner.js"></script>
+    <script type="text/javascript" src="src/EventDiary.js"></script>
+    <script type="text/javascript" src="src/Event.js"></script>
     <script type="text/javascript" src="src/interface.js"></script>
+    <link rel="stylesheet" href="css/index.css">
     <meta charset="utf-8">
-    <title>EventPlanner</title>
+    <title>Event Planner</title>
   </head>
   <body>
-    <h1>EventPlanner</h1>
+    <div class="container">
+    <h1>Event Planner</h1>
     <div id= "form">
-      <input type="text" id="user_input"><br><br>
-      <input type="datetime-local" id="date_time"><br><br>
-      <button id="event_create_button" type="button">Submit Event</button>
-    </div>
-    <div id="eventlistings">
+      <p>Please enter your event details below:</p>
+      <label>Name of Event: </label>
+      <div class="form_input">
+        <input type="text" id="user_input" maxlength="255">
+      </div>
+
+      <label>Date/Time: </label>
+      <div class="form_input">
+          <input type="datetime-local" id="date_time">
+      </div>
+
+      <button id="event_create_button" type="button">Save Event</button>
     </div>
 
+    <div id="eventlistings">
+    </div>
+    </div>
   </body>
 </html>

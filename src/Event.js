@@ -1,4 +1,4 @@
-class EventPlanner {
+class Event {
   constructor(content, date) {
     this._content = content || null
     this._date = date || null
