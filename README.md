@@ -2,7 +2,6 @@
 ------
 
 ## User Stories
-------
 
 ```
 As a user   
@@ -28,14 +27,13 @@ I'd like it to be deployed publicly
 ```
 
 ## How to user
-------
 
 1. Clone this repo `https://github.com/learningtocode101/event_planner.git`
 2. Change directory `cd Event-Planner`
 3. Open index.html in a browser
 
 ## Tech Stack
------
+
 * JavaScript - programming language;
 * Custom Testing Framework - Testing framework built via pair programming with:
 [Rodrique](https://github.com/Rodrigue-K)
