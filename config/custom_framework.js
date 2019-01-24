@@ -1,6 +1,6 @@
 //takes in a description and test code to execute
 const describe = (description, fn)=> {
-  console.log(description + ':')
+  console.log(description)
   fn()
 }
 
