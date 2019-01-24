@@ -10,7 +10,7 @@ I would like to create events
 
 As a user  
 So others I can know what is happening  
-I would like to view upcoming events  
+I would like to view upcoming events in chronological order 
 
 As a user  
 So I am aware of the weather  
