@@ -3,7 +3,7 @@ class EventDiary {
     this._eventList = [];
   }
 
-  pushEvent(event) {
+  saveEvent(event) {
     this._eventList.push(event);
   }
 

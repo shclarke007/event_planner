@@ -1,6 +1,6 @@
 window.addEventListener('load', ()=> {
 
-let calendar = new EventDiary();
+let diary = new EventDiary();
 let button = document.getElementById('event_create_button')
 
 button.addEventListener('click', ()=> {
@@ -10,15 +10,17 @@ button.addEventListener('click', ()=> {
 //creates event & push to a calendar
 function makeEvent() {
   let content = document.getElementById('user_input').value
-  let datetime = document.getElementById('date_time').value
-  let event = new Event(content, datetime);
-  calendar.pushEvent(event);
+  let date = document.getElementById('date_input').value
+  let time = document.getElementById('time_input').value
+  let event = new Event;
+  event.createEvent(content, date, time);
+  diary.saveEvent(event);
   displayEvent()
 }
 
   const displayEvent = ()=> {
     let eventlistings = document.getElementById('eventlistings');
-    events = calendar.displayEvent();
+    events = diary.displayEvent();
     eventlistings.innerText = " ";
     eventlistings.appendChild(events);
   }
