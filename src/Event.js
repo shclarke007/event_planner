@@ -1,9 +1,4 @@
 class Event {
-  // constructor(content, date, time) {
-  //   // this._content = content || null
-  //   // this._date = date || null
-  //   // this._time = time || null
-  // }
 
   createEvent(content, date, time){
     this._content = content || null
