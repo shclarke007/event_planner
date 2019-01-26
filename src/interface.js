@@ -8,6 +8,16 @@ button.addEventListener('click', ()=> {
   makeEvent();
 });
 
+
+let data = JSON.parse(this.response)
+
+let weather_button = document.getElementById('get_weather')
+weather_button.addEventListener('click',()=>{
+  var request = new XMLHttpRequest();
+  request.open('GET', '', true)
+})
+
+
 //creates event & push to an event diary
 function makeEvent() {
   let content = document.getElementById('user_input').value
