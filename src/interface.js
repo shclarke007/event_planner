@@ -1,5 +1,6 @@
-window.addEventListener('load', ()=> {
+window.onload = ()=> {
 
+let key = config.MY_KEY
 let diary = new EventDiary();
 window.e = diary._eventList;
 let button = document.getElementById('event_create_button')
@@ -8,14 +9,21 @@ button.addEventListener('click', ()=> {
   makeEvent();
 });
 
-
-let data = JSON.parse(this.response)
-
 let weather_button = document.getElementById('get_weather')
+
 weather_button.addEventListener('click',()=>{
-  var request = new XMLHttpRequest();
-  request.open('GET', '', true)
-})
+  let weather_div = document.getElementById('weather_display')
+  let city = document.getElementById('city_input').value
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${key}`
+  let request = new XMLHttpRequest();
+  request.open('GET', url, true)
+  request.onload = () => {
+    let data = JSON.parse(request.response)
+    weather_div.innerText = `Weather: ${data.weather[0].description}`
+    + "\n" + `Temp: ${data.main.temp}`
+  }
+  request.send()
+});
 
 
 //creates event & push to an event diary
@@ -37,4 +45,4 @@ function makeEvent() {
     eventlistings.appendChild(events);
   }
 
-})
+}
